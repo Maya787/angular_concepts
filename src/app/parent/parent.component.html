@@ -1,0 +1,51 @@
+<div class="text-center">
+    <h2>Buy Product</h2>
+</div>
+<div class="alert alert-light border d-flex align-items-center" *ngIf="addedProduct">
+    <strong class="text-success"></strong> &nbsp;{{addedProduct}} is Selected and Added in cart
+    <button class="btn btn-success ml-auto">Checkout</button>
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-columns">
+                <div class="card">
+                    <img class="card-img-top" src="../../assets/laptopimage.jpg" alt="Card image" height="200px">
+                    <div class="card-body">
+                        <h4 class="card-title">Laptop</h4>
+
+                        <button class="btn btn-primary" (click)="onSelectProduct('product1')">Select this product</button>
+                    </div>
+
+                </div>
+
+
+
+                <div class="card">
+                    <img class="card-img-bottom" src="../../assets/mobileimage.jpg" alt="Card image" height="200px">
+                    <div class="card-body">
+                        <h4 class="card-title">Mobile</h4>
+
+                        <button class="btn btn-primary" (click)="onSelectProduct('product2')">Select this product</button>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <img class="card-img-bottom" src="../../assets/tvimage.jpg" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">Television</h4>
+
+                        <button class="btn btn-primary" (click)="onSelectProduct('product3')">Select this
+                            product</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <app-child class="w-100" [productSelected]="proSelected" [selectedProduct]="selProduct"
+            (addedProduct)="onAddProduct($event)"></app-child>
+
+    </div>
+</div>

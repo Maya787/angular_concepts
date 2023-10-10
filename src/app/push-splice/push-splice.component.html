@@ -1,0 +1,19 @@
+<div>
+    <div>
+        <input type="text" name="" placeholder="username" #Uname>
+        <button (click)="onCreateUser(Uname)">create user</button>
+        <button (click)="onRemoveUser()">remove user</button>
+    </div>
+    <table>
+        <tr>
+            <th>username</th>
+            <th>remove</th>
+        </tr>
+        <tr *ngFor="let user of users;index as i">
+            <td>{{user.name}}</td>
+            <td><button (click)="onRemoveItem(i)">remove item</button></td>
+           <!-- <td><button>remove item</button></td> -->
+        </tr>
+
+    </table>
+</div>

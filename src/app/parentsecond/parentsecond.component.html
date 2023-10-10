@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 border border-secondary py-4">
+            <h2 class="text-success">User</h2>
+            <h4>User name:</h4>
+            <div *ngFor="let user of users;index as i">
+                {{user.name}}
+                <button class="text-danger" (click)="onRemoveItem(i)">Romove</button>
+            </div>
+        </div>
+        <div class="col-md-6 border border-secondary py-4">
+            One of three columns
+        </div>
+
+        <app-childsecond [placeholderText]="createuser" class="w-100" (addedUser)="onAddUser($event)"></app-childsecond>
+    </div>
+</div>

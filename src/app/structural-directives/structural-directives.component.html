@@ -1,0 +1,29 @@
+<!-- code for *ngIf else then -->
+<!-- <button (click)="onBtnClick()">create Block</button>
+
+<p *ngIf="isActive; then thenblock else elseblock"></p>
+<ng-template #thenblock>
+    <div>Block has been created</div>
+</ng-template>
+<ng-template #elseblock>
+    <div>No block has been created yet</div>
+</ng-template> -->
+
+
+<!-- code for ngswitch -->
+<div>
+<select class="form-control" (change)="onSelectval($event)">
+    <option value="default">Select Product</option>
+    <option value="Laptop">Laptop</option>
+    <option value="Mobile">Mobile</option>
+    <option value="TV">TV</option>
+    <option value="Washing Machine">Washing Machine</option>
+</select>
+</div>
+<div [ngSwitch]="selectedProduct">
+    <h4 *ngSwitchDefault>Please select product</h4>
+    <h4 *ngSwitchCase="'Laptop'">Laptop</h4>
+    <h4 *ngSwitchCase="'Mobile'">Mobile</h4>
+    <h4 *ngSwitchCase="'TV'">TV</h4>
+    <h4 *ngSwitchCase="'Washing Machine'">Washing Machine</h4>
+</div>
